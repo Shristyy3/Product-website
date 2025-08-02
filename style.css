@@ -76,12 +76,16 @@ body {
 
 /* Responsive for mobile */
 @media (max-width: 600px) {
-  .product-title, .product-price, .product-description {
+
+  .product-title,
+  .product-price,
+  .product-description {
     text-align: center;
   }
 
   .buy-button {
     display: block;
-    margin: 0 auto;
-  }
+    margin: 0 auto;
+  }
+
 }
