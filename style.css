@@ -1,0 +1,51 @@
+/* Add subtle text shadows for headings */
+.product-title {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Smooth background color transition on button hover */
+.buy-button {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Add a subtle gradient background to the button */
+.buy-button {
+  background: linear-gradient(135deg, #0069d9, #004085);
+}
+
+/* Add a small badge for "New" product */
+.product-container::before {
+  content: "NEW";
+  position: absolute;
+  background: #dc3545;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  top: 15px;
+  left: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+/* Responsive text alignment for smaller screens */
+@media (max-width: 480px) {
+  .product-title, .product-price, .product-description {
+    text-align: center;
+  }
+
+  .buy-button {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+/* Add smooth zoom effect on entire product container */
+.product-container {
+  transition: transform 0.3s ease;
+}
+
+.product-container:hover {
+  transform: scale(1.02);
+}
