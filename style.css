@@ -1,51 +1,87 @@
-/* Add subtle text shadows for headings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.product-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-container:hover {
+  transform: scale(1.01);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.02);
+}
+
+.product-details {
+  margin-top: 20px;
+}
+
 .product-title {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Smooth background color transition on button hover */
+.product-price {
+  font-size: 22px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
 .buy-button {
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Add a subtle gradient background to the button */
-.buy-button {
-  background: linear-gradient(135deg, #0069d9, #004085);
-}
-
-/* Add a small badge for "New" product */
-.product-container::before {
-  content: "NEW";
-  position: absolute;
-  background: #dc3545;
+  padding: 12px 24px;
+  background-color: #007bff;
   color: white;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 4px;
-  top: 15px;
-  left: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  pointer-events: none;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive text alignment for smaller screens */
-@media (max-width: 480px) {
+.buy-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
   .product-title, .product-price, .product-description {
     text-align: center;
   }
 
   .buy-button {
     display: block;
-    margin: 20px auto 0;
-  }
-}
-
-/* Add smooth zoom effect on entire product container */
-.product-container {
-  transition: transform 0.3s ease;
-}
-
-.product-container:hover {
-  transform: scale(1.02);
+    margin: 0 auto;
+  }
 }
